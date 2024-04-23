@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordions</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: whitesmoke;
+            width: 100vw;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body > h2{
+            display: block;
+            text-align: center;
+            margin-top:  20px;
+        }
+
+        .container{
+            max-width: 80%;
+            margin: 20px auto;
+        }
+
+        .tab label{
+            background-color: black;
+            color: white;
+            display: block;
+            padding: 15px 25px;
+            cursor: pointer;
+            border-radius: 8px;
+            margin: 2px 0;
+            position: relative;
+        }
+
+        .tab label::after{
+            content: '+';
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            font-size: large;
+            font-weight: 500;
+            color: white;
+        }
+
+        .tab input:checked ~ label::after{
+            content: '-';
+            font-weight: 600;
+            font-size: xx-large;
+            top: 0;
+        }
+
+        .tab input{
+            display: none;
+        }
+
+        .tab > .content{
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+            background: white;
+            border-radius: 0 0 8px 8px;
+            position: relative;
+            top: -10px;
+            z-index: -1;
+            border: 1px solid rgba(128, 128, 128, 0.204);
+        }
+
+        .content p{
+            padding: 20px;
+        }
+
+        .tab input:checked ~ .content{
+            max-height: 100vh;
+            box-shadow: 5px 5px 10px rgb(184, 183, 183);
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="suphead">Accordians | HTML and CSS</h2>
+    <div class="container">
+        <div class="tab">
+            <input type="checkbox" name="toggle" id="ac1">
+            <label for="ac1">What is HTML</label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt inventore debitis blanditiis dicta
+                    numquam consequatur et tempora suscipit? Perferendis dolorum, corporis ab laborum cumque laudantium,
+                    nam consequuntur libero nulla deserunt inventore autem. Veritatis, doloribus, id quam nostrum
+                    voluptas expedita eius quibusdam blanditiis nesciunt neque porro ex incidunt maxime quas ipsa?</p>
+            </div>
+        </div>
+        <div class="tab">
+            <input type="checkbox" name="toggle" id="ac2">
+            <label for="ac2">What is HTML</label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt inventore debitis blanditiis dicta
+                    numquam consequatur et tempora suscipit? Perferendis dolorum, corporis ab laborum cumque laudantium,
+                    nam consequuntur libero nulla deserunt inventore autem. Veritatis, doloribus, id quam nostrum
+                    voluptas expedita eius quibusdam blanditiis nesciunt neque porro ex incidunt maxime quas ipsa?</p>
+            </div>
+        </div>
+        <div class="tab">
+            <input type="checkbox" name="toggle" id="ac3">
+            <label for="ac3">What is HTML</label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt inventore debitis blanditiis dicta
+                    numquam consequatur et tempora suscipit? Perferendis dolorum, corporis ab laborum cumque laudantium,
+                    nam consequuntur libero nulla deserunt inventore autem. Veritatis, doloribus, id quam nostrum
+                    voluptas expedita eius quibusdam blanditiis nesciunt neque porro ex incidunt maxime quas ipsa?</p>
+            </div>
+        </div>
+        <div class="tab">
+            <input type="checkbox" name="toggle" id="ac4">
+            <label for="ac4">What is HTML</label>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt inventore debitis blanditiis dicta
+                    numquam consequatur et tempora suscipit? Perferendis dolorum, corporis ab laborum cumque laudantium,
+                    nam consequuntur libero nulla deserunt inventore autem. Veritatis, doloribus, id quam nostrum
+                    voluptas expedita eius quibusdam blanditiis nesciunt neque porro ex incidunt maxime quas ipsa?</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
